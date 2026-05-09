@@ -1,6 +1,14 @@
 import styles from './ExchangeInfo.module.css';
 
-export default function ExchangeInfo({ amount, from, to, rate, result }) {
+interface EschangeInfoProm{
+  to:string,
+  from:string,
+  amount:string,
+  rate:number,
+  result:number
+}
+
+export default function ExchangeInfo({ amount, from, to, rate, result }:EschangeInfoProm) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>
